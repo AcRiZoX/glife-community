@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glife Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="cursor"></div>
+
+    <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      //cursor effects when mouse stopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 1000000000);
+    });
+
+    //cursor effects when mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    });
+    </script>
+
+    <section>
+        <h1>Glife Community | Wiki</h1>
+        <img src="dossier/img/logo.png" alt="Logo atekted">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+
+      <article>
+              <a href="https://mistik-wiki.fr/wiki.php">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Wiki
+    </a>
+    <a href="https://discord.gg/q4KucTDhdC">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        replace 
+    <a href="https://discord.gg/taazuvujVK">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        community
+    </a>  
+      </article>
+    </section>
+</body>
+<html>
